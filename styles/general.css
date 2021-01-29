@@ -1,11 +1,18 @@
-img.peepoWTF {
+
+body {
+    margin: 0;
+}
+div#header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: red;
+    background-color: white;
+    padding-top: 0.5em;
+    margin: 0;
 }
 
-div.test {
+div#main {
     height: 500em;
     background-color: green;
+    margin-top: 0;
 }
