@@ -2,7 +2,7 @@
 body {
     margin: 0;
 }
-div#header {
+#header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -11,8 +11,23 @@ div#header {
     margin: 0;
 }
 
-div#main {
-    height: 500em;
+#main {
+    height: 500vh;
     background-color: green;
     margin-top: 0;
 }
+#footer{
+    display: flex;
+    flex-direction:row;
+    height: 50vh;
+    background-color: rgb(230, 15, 15);
+    border-top: 1px solid black;
+}
+#leftFooter{
+    width: 50%;
+    border-right: 1px solid black;
+}
+#rightFooter{
+    width: 50%;
+}
+
