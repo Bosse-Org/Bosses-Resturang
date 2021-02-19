@@ -2,19 +2,29 @@ body {
     margin: 0 auto;
     padding: 0;
 }
+li {
+    float: right;
+    margin-right: 5px;
+    margin-top: 115px;
+    list-style: none;
+}
+img {
+    float: left;
+}
 #header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: white;
     padding-top: 0.5em;
-    margin: 0;
+    margin: 80px;
 }
 
 #main {
     height: 500vh;
     background-color: green;
     margin-top: 0;
+    font-family: 'Lobster';
 }
 #footer{
     display: flex;
