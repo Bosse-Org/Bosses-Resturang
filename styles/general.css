@@ -26,6 +26,9 @@ img {
     margin-top: 0;
     font-family: 'Lobster';
 }
+div p {
+    margin-left: 1em;
+}
 #footer{
     display: flex;
     flex-direction:row;
