@@ -76,3 +76,6 @@ div p {
     width: 50%;
 }
 
+.clearfix {
+    overflow: hidden;
+}
