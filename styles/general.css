@@ -2,12 +2,19 @@ body {
     margin: 0;
     padding: 0;
 }
-li {
+
+a {
     display: inline;
     margin: auto;
     list-style: none;
     padding: auto;
     text-align: center;
+    width: 20%;
+    border: none;
+    text-decoration: none;
+}
+a:hover {
+    background-color:rgba(0, 0, 0, 0.2);
 }
 .title {
     font-size: 100px;
@@ -35,6 +42,9 @@ li {
 }
 
 #menu {
+    display: grid;
+    grid-template-columns: 20% repeat(5);
+    grid-template-rows: 100%;
     top: 0;
     position: -webkit-sticky;
     position: sticky;
