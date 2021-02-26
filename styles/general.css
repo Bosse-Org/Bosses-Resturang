@@ -14,13 +14,24 @@ li {
     margin: auto;
     text-align: center;
     font-family: 'Lobster';
-    color: #93c47d;
+    color: #72d345;
+    text-shadow: black 0px 0px 10px;
 }
 #header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
     top: 0;
     background-color: white;
     margin: auto;
     background-image: url(https://lh3.googleusercontent.com/iPDgzOMemI50QL0JE-B2jix_u28rcLJtRD1pgx9-kCzebGD7MTEl8vm_PDHZFUtV1pnu8--kxfc3mw-oFZbFxNc=w16383);
+    background-position: center;
+    background-size: 100%;
+}
+
+#header::after {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 #menu {
