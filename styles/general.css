@@ -8,8 +8,11 @@ li {
     margin-top: 115px;
     list-style: none;
 }
-img {
-    float: left;
+.title {
+    font-size: 64px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Lobster';
 }
 #header {
     position: -webkit-sticky;
@@ -17,7 +20,7 @@ img {
     top: 0;
     background-color: white;
     padding-top: 0.5em;
-    margin: 80px;
+    margin: auto;
 }
 
 #main {
