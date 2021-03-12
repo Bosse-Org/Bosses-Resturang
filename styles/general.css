@@ -21,7 +21,7 @@ a:hover {
     margin: auto;
     text-align: center;
     font-family: 'Lobster';
-    color: #72d345;
+    color: rgb(168, 35, 97);
     text-shadow: black 0px 0px 10px;
 }
 #header {
@@ -32,7 +32,7 @@ a:hover {
     top: 0;
     background-color: white;
     margin: auto;
-    background-image: url(https://lh3.googleusercontent.com/iPDgzOMemI50QL0JE-B2jix_u28rcLJtRD1pgx9-kCzebGD7MTEl8vm_PDHZFUtV1pnu8--kxfc3mw-oFZbFxNc=w16383);
+    background-image: url(https://wallpaperaccess.com/full/3014609.jpg);
     background-position: center;
     background-size: 100%;
 }
@@ -48,13 +48,13 @@ a:hover {
     top: 0;
     position: -webkit-sticky;
     position: sticky;
-    background-color: greenyellow;
+    background-color: rgba(218, 181, 61, 0.459);
     display: flex;
 }
 
 #main {
     height: 120vh;
-    background-color: green;
+    background-color: rgba(170, 134, 34, 0.692);
     margin-top: auto;
     font-family: 'Lobster';
     display: flex;

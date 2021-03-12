@@ -24,16 +24,12 @@
     <div id="main">
         <div class="form">
             <h2 class="booking-title">Bokning</h2>
-            <form class="inputs">
-                <label>Förnamn</label><br>
-                <input type="text"><br>
-                <label>Efternamn</label><br>
-                <input type="text"><br>
-                <label>Telefonnummer</label><br>
-                <input type="text"><br>
-                <label>Antal personer</label><br>
-                <input type="text"><br>
-                <input type="submit"><br>
+            <form name="bookingForm" onsubmit="return validateForm(this);">
+                Förnamn:<br><input type="text" name="fName"><br>
+                Efternamn:<br><input type="text" name="lName"><br>
+                Telefonnummer:<br><input type="tel" name="pNumber"><br>
+                Antal personer:<br><input type="text" name="aPeople"><br>
+                <input type="submit" value="Submit"><br>
             </form>
         </div>
     </div>
@@ -45,7 +41,6 @@
             
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
-
 </html>
