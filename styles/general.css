@@ -15,6 +15,7 @@ a {
 }
 input {
     border-radius: 3px;
+    width: 200px;
 }
 input#Boka {
     width: 165px;
@@ -24,10 +25,7 @@ input#Boka {
     font-size: 2em;
 }
 input#Time {
-    width: 70px;
-}
-input#aPeople {
-    width: 50px;
+    text-align: center;
 }
 a:hover {
     background-color:rgba(0, 0, 0, 0.2);
