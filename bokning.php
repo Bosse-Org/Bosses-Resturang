@@ -14,14 +14,6 @@ renderHeader("Booking");
             </form>
         </div>
     </div>
-    <div id="footer">
-        <div id="leftFooter">
-            
-        </div>
-        <div id="rightFooter">
-            
-        </div>
-    </div>
-    <script src="scripts/main.js"></script>
-</body>
-</html>
+<?php
+renderFooter();
+?>

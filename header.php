@@ -1,5 +1,6 @@
 <?php
 function renderHeader(string $title) {
+    require("footer.php");
     echo('
 <!DOCTYPE html>
 <head>
