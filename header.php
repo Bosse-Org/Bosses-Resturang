@@ -21,7 +21,7 @@ function renderHeader(string $title) {
     <div id="menu">
             <a href="index.php">Hem</a> 
             <a href="bokning.php">Bokning</a>
-            <a>pog</a>
+            <a>Om Oss</a>
             <a>pog</a>
             <a>pog</a>
     </div>');
