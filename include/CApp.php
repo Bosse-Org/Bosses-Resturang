@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require("CDatabase.php");
-require("CUser.php");
+require_once("CDatabase.php");
+require_once("CUser.php");
 
 function print_r_pre($data)
 {
@@ -51,11 +51,13 @@ class CApp
                 <a>pog</a>
                 <a>pog</a>
             </div>
+            <div id="main">
     <?php
     }
     public function renderFooter()
     {
         ?>
+            </div>
             <div id="footer">
                 <div id="leftFooter">
                 </div>

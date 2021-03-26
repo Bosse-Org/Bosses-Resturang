@@ -4,89 +4,96 @@ $app->renderHeader("Booking");
 
 class CBooking
 {
-	public function __construct(CApp &$app)
-	{
-		$this->m_app = $app;
-	}
+    public function __construct(CApp &$app)
+    {
+        $this->m_app = $app;
+    }
 
-	public function __destruct()
-	{
-		//echo("CBooking Destruktor körs!");
-	}
+    public function __destruct()
+    {
 
-	public function renderForm()
-	{
-		?>
-		<div class="form">
+    }
+
+    public function renderBooking()
+    {
+        ?>
+        <div class="form">
             <h2 class="booking-title">Bokning</h2>
-            <form name="bookingForm" onsubmit="return validateForm(this);">
+            <form name="bookingForm" onsubmit="return validateForm(this);" method="post">
 
             <label for="text">Förnamn:</label><br/>
-            <input type="text" name="fName" id="firstname"/><br/>
-
-            <label for="text">Efternamn:</label><br/>
-            <input type="text" name="lName" id="lastname"/><br/>
-
-            <label for="text">Telefonnummer:</label><br/>
-            <input type="tel" name="pNumber" id="phonenumber"/><br/>
-
-            <label for="text">Antal Personer:</label><br/>
-            <input type="number" name="aPeople" id="amountpeople"/><br/>
-
-            <label for="text">Datum:</label><br/>
-            <input type="date" name="Date" id="date"/><br/>
-
-            <label for="text">Tid:</label><br/>
-            <input type="time" name="Time" id="time"/><br/>
-
-            <input id="Boka" type="submit" value="Boka"><br>
+	    	<input type="text" name="firstname" id="firstname"/><br/>
+	
+	    	<label for="text">Efternamn:</label><br/>
+	    	<input type="text" name="lastname" id="lastname"/><br/>
+	
+	    	<label for="text">Telefonnummer:</label><br/>
+	    	<input type="tel" name="phonenumber" id="phonenumber"/><br/>
+	
+	    	<label for="text">Antal Personer:</label><br/>
+		    <input type="number" name="amountpeople" id="amountpeople"/><br/>
+	
+    		<label for="text">Datum:</label><br/>
+    		<input type="date" name="date" id="date"/><br/>
+	
+	    	<label for="text">Tid:</label><br/>
+    		<select type="time" name="time" id="time">
+            <option value="16:00" label="16:00">16:00</option>
+                    <option value="16:30" label="16:30">16:30</option>
+                    <option value="17:00" label="17:00">17:00</option>
+                    <option value="17:30" label="17:30">17:30</option>
+                    <option value="18:00" label="18:00">18:00</option>
+                    <option value="18:30" label="18:30">18:30</option>
+                    <option value="19:00" label="19:00">19:00</option>
+                    <option value="19:30" label="19:30">19:30</option>
+                    <option value="20:00" label="20:00">20:00</option>
+                    <option value="20:30" label="20:30">20:30</option>
+                    <option value="21:00" label="21:00">21:00</option>§
+            </select><br/>
+	
+		    <input type="submit" value="Boka" id="Boka" ><br>
             </form>
         </div>
-		<?php
-	}
+        <?php
+    }
 
-	private function validateForm(array $data)
+    private function validateForm(array $data)
 	{
-		$this->m_validationErrors = [];
-		if(strlen($data["firstname"]) < 1)
+        if(strlen($data["firstname"]) < 1)
 		{
-			$this->m_validationErrors[] = "Förnamnet är inte giltigt. Du måste ange mer än 1 tecken i Förnamnet.";
+			$this->m_validationErrors[] = "Förnamnet är inte ifyllt.";
 			return false;
 		}
-
         if(strlen($data["lastname"]) < 1)
 		{
-			$this->m_validationErrors[] = "Efternamnet är inte giltigt. Du måste ange mer än 1 tecken i Efternamnet.";
+			$this->m_validationErrors[] = "Efternamnet är inte ifyllt.";
 			return false;
 		}
-
-        if(strlen($data["phonenumber"]) < 4 || strlen($data["phonenumber"]) > 15)
+        if(strlen($data["phonenumber"]) < 5 || strlen($data["phonenumber"]) > 15)
 		{
-			$this->m_validationErrors[] = "Telefonnummeret är inte giltigt. Du måste ange ett Telefonnummer som är större än 4 och mindre än 15.";
+			$this->m_validationErrors[] = "Telefonnummret är för kort eller långt. Det måste vara minst 5 siffror och störst 15 siffror.";
 			return false;
 		}
-
         if(strlen($data["amountpeople"]) < 1)
 		{
-			$this->m_validationErrors[] = "Du måste ange hur många som det ska bokas för.";
+			$this->m_validationErrors[] = "Antal personer är inte ifyllt.";
 			return false;
 		}
-
         if(strlen($data["date"]) < 1)
 		{
-			$this->m_validationErrors[] = "Du måste ange ett datum att boka.";
+			$this->m_validationErrors[] = "Datumet är inte ifyllt.";
 			return false;
 		}
-
-		if(strlen($data["time"]) < 1)
+        if(strlen($data["time"]) < 1)
 		{
-			$this->m_validationErrors[] = "Du måste ange en tid att boka.";
+			$this->m_validationErrors[] = "Tiden är inte ifyllt.";
 			return false;
 		}
+		$this->m_validationErrors = [];
 		return true;
 	}
 
-	private function insert(array $data)
+    private function insert(array $data)
 	{	
 		$this->m_app->db()->insert("users", $data);
 	}
@@ -98,7 +105,8 @@ class CBooking
 		
 		if($this->validateForm($_POST))
 		{
-			$this->insert($_POST);	
+			$this->insert($_POST);
+            Header('Location: '.$_SERVER['PHP_SELF']);
 		}
 		else
 		{
@@ -107,72 +115,53 @@ class CBooking
 		}
 	}
 
-	public function renderNewsItem(array $newsItem)
+    public function renderUserItem(array $bookingTime)
 	{
 		?>
-		<div class="newsItem">
-			<h2><?php echo($newsItem["id"]);?></h2>
-			<div class="text"><?php echo($newsItem["firstname"]);?></div>
-            <div class="text"><?php echo($newsItem["lastname"]);?></div>
-            <div class="text"><?php echo($newsItem["phonenumber"]);?></div>
-            <div class="text"><?php echo($newsItem["amountpeople"]);?></div>
-            <div class="text"><?php echo($newsItem["date"]);?></div>
-            <div class="text"><?php echo($newsItem["time"]);?></div><br/>
+		<div class="bookingTime">
+			<h2><?php echo($bookingTime["id"]); ?></h2>
+			<div><?php echo($bookingTime["firstname"]); ?></div>
+            <div><?php echo($bookingTime["lastname"]); ?></div>
+            <div><?php echo($bookingTime["phonenumber"]); ?></div>
+            <div><?php echo($bookingTime["amountpeople"]); ?></div>
+            <div><?php echo($bookingTime["date"]); ?></div>
+            <div><?php echo($bookingTime["time"]); ?></div>
 		</div>
 		<?php
 	}
 
-	public function selectAndRenderAllNewsItems()
+    public function selectAndRenderAllUserItems()
 	{
-		/*
-		x Måste komma åt app
-		x Måste komma åt db
-		(Ansluta om inte det redan är gjort)
-		*/
-
-
-		//$query = "SELECT * FROM news";
-		//$result = $this->m_app->db()->query($query);
-
 		$result = $this->m_app->db()->selectAll("users");
 
 		if($result->num_rows > 0)
 		{
 			while($row = $result->fetch_assoc())
 			{
-				//var_dump($row);
-				//echo("<pre>");
-				//print_r($row);
-				//echo("</pre>");
-				$this->renderNewsItem($row);
+				$this->renderUserItem($row);
 			}
 		}
 		else
 		{
-			echo("Det finns inga nyheter");
+			echo("Det finns inga användare");
 		}
-
-		//$this->renderNewsItem($this->getRandomizedNewsItem());
-		//$this->renderNewsItem($this->getRandomizedNewsItem());
-		//$this->renderNewsItem($this->getRandomizedNewsItem());
 	}
-
-	//--->Member Variables<---//
-	private $m_validationErrors = []; 
+    //--->Member Variables<---//
+    private $m_validationErrors = []; 
 	private $m_app = null;
 };
 
 $booking = new CBooking($app);
 $booking->validateAndInsertForm();
-$booking->selectAndRenderAllNewsItems();
+$booking->selectAndRenderAllUserItems();
 
 print_r($_POST);
 ?>
-    <div id="main">
-        <?php
-        $booking->renderForm();
-        ?>
-    </div>
+
+<?php
+$booking->renderBooking();
+?>
+
 <?php
 $app->renderFooter();
 ?>

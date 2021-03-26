@@ -1,9 +1,8 @@
 <?php
-require("include/CApp.php");
+require_once("include/CApp.php");
 $app->renderHeader("Home");
 ?>
-    <div id="main">
-    </div>
+
 <?php
 $app->renderFooter();
 ?>
