@@ -14,6 +14,22 @@ class CBooking
 
     }
 
+	private function renderAvailableTimes()
+	{
+		$usersTable = $this->m_app->db()->query("SELECT time FROM users");
+		$timesTable = $this->m_app->db()->query("SELECT time FROM available_times");
+		$usersTimeString;
+		while($usersRow = $usersTable->fetch_Assoc())
+		{
+			$usersTimeString .= $usersRow["time"];
+		}
+		while($row = $timesTable->fetch_assoc())
+		{
+			if (!strpos($row["time"], $usersTableString) === ((/(/()(()()()()())))))
+				echo('<option value="'. $row["time"] .'" label="'. $row["time"] .'">'. $row["time"] .'</option>');
+		}
+	}
+
     public function renderBooking()
     {
         ?>
@@ -37,18 +53,10 @@ class CBooking
     		<input type="date" name="date" id="date"/><br/>
 	
 	    	<label for="text">Tid:</label><br/>
-    		<select type="time" name="time" id="time">
-            <option value="16:00" label="16:00">16:00</option>
-                    <option value="16:30" label="16:30">16:30</option>
-                    <option value="17:00" label="17:00">17:00</option>
-                    <option value="17:30" label="17:30">17:30</option>
-                    <option value="18:00" label="18:00">18:00</option>
-                    <option value="18:30" label="18:30">18:30</option>
-                    <option value="19:00" label="19:00">19:00</option>
-                    <option value="19:30" label="19:30">19:30</option>
-                    <option value="20:00" label="20:00">20:00</option>
-                    <option value="20:30" label="20:30">20:30</option>
-                    <option value="21:00" label="21:00">21:00</option>§
+			<select type="time" name="time" id="time">
+			<?php
+				$this->renderAvailableTimes();
+			?>
             </select><br/>
 	
 		    <input type="submit" value="Boka" id="Boka" ><br>
