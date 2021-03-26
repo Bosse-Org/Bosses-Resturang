@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<head>
-    <title>12.1 - Meny</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel="stylesheet">
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
-</head>
-<body>
-    <div id="header">
-        <h1 class="title">
-            Bosses Restaurang
-        </h1>
-    </div>
-    <div id="menu">
-        <a href="index.html">Hem</a> 
-        <a href="bokning.html">Bokning</a>
-        <a>Om oss</a>
-        <a>pog</a>
-        <a>pog</a>
-    </div>
-    <div id="main">
+<?php
+class CForm
+{
+    public function __construct()
+    {
+
+    }
+    public function renderBooking()
+    {
+        ?>
         <div class="form">
             <h2 class="booking-title">Bokning</h2>
             <form name="bookingForm" onsubmit="return validateForm(this);">
@@ -46,15 +32,9 @@
                 <input id="Boka" type="submit" value="Boka"><br>
             </form>
         </div>
-    </div>
-    <div id="footer">
-        <div id="leftFooter">
-            
-        </div>
-        <div id="rightFooter">
-            
-        </div>
-    </div>
-    <script src="scripts/main.js"></script>
-</body>
-</html>
+        <?php
+    }
+}
+
+$form = new CForm();
+?>
