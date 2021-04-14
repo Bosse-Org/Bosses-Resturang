@@ -36,11 +36,11 @@ class CBooking
             <h2 class="booking-title">Bokning</h2>
         <div class="form">
             <form id="bookingForm" name="bookingForm" onsubmit="return validateForm(this);" method="post">
-        
+            
             <label for="text">Förnamn:</label><br/>
 	    	<input type="text" name="firstname" id="firstname"/><br/>
-	
-	    	<label for="text">Efternamn:</label><br/>
+
+            <label for="text">Efternamn:</label><br/>
 	    	<input type="text" name="lastname" id="lastname"/><br/>
 	
 	    	<label for="text">Telefonnummer:</label><br/>
@@ -165,7 +165,6 @@ $booking = new CBooking($app);
 $booking->validateAndInsertForm();
 $booking->selectAndRenderAllUserItems();
 
-print_r($_POST);
 ?>
 
 <?php
