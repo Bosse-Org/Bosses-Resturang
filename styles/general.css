@@ -14,7 +14,6 @@ a {
     text-decoration: none;
 }
 input {
-    border-radius: 3px;
     width: 200px;
 }
 input#Boka {
@@ -23,9 +22,7 @@ input#Boka {
     margin-top: 18px;
     font-family: 'Lobster';
     font-size: 2em;
-}
-input#Time {
-    text-align: center;
+    border-radius: 3px;
 }
 a:hover {
     background-color:rgba(0, 0, 0, 0.2);
@@ -40,8 +37,6 @@ a:hover {
 }
 #header {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50vh;
     top: 0;
     background-color: white;
@@ -71,18 +66,32 @@ a:hover {
     background-color: rgba(170, 134, 34, 0.692);
     margin-top: auto;
     font-family: 'Lobster';
-    display: flex;
-    justify-content: center;
-    align-items: top;    
+    display: flex;  
 }
-.booking-title {
-    font-size: 50px;
-    margin-top: 0;
-}
-.inputs {
+.form {
+    height: 500px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px 100px 100px 100px;
     margin: auto;
-    display: inline-block;
-    text-align: left;
+}
+.bookingForm {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1 span 1;
+}
+#firstname {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+#lastname {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+#phonenumber {
+    grid-column-start: 1;
+    grid-row-start: 3;
 }
 #footer{
     display: flex;

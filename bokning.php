@@ -25,7 +25,7 @@ class CBooking
 		}
 		while($row = $timesTable->fetch_assoc())
 		{
-			if (!strpos($row["time"], $usersTableString) === ((/(/()(()()()()())))))
+			if (!strpos($row["time"], $usersTableString) == true)
 				echo('<option value="'. $row["time"] .'" label="'. $row["time"] .'">'. $row["time"] .'</option>');
 		}
 	}
@@ -33,10 +33,10 @@ class CBooking
     public function renderBooking()
     {
         ?>
-        <div class="form">
             <h2 class="booking-title">Bokning</h2>
-            <form name="bookingForm" onsubmit="return validateForm(this);" method="post">
-
+        <div class="form">
+            <form id="bookingForm" name="bookingForm" onsubmit="return validateForm(this);" method="post">
+        
             <label for="text">Förnamn:</label><br/>
 	    	<input type="text" name="firstname" id="firstname"/><br/>
 	
@@ -125,10 +125,11 @@ class CBooking
 
     public function renderUserItem(array $bookingTime)
 	{
+        /*
 		?>
 		<div class="bookingTime">
 			<h2><?php echo($bookingTime["id"]); ?></h2>
-			<div><?php echo($bookingTime["firstname"]); ?></div>
+	    	<div><?php echo($bookingTime["firstname"]); ?></div>
             <div><?php echo($bookingTime["lastname"]); ?></div>
             <div><?php echo($bookingTime["phonenumber"]); ?></div>
             <div><?php echo($bookingTime["amountpeople"]); ?></div>
@@ -136,6 +137,7 @@ class CBooking
             <div><?php echo($bookingTime["time"]); ?></div>
 		</div>
 		<?php
+        */
 	}
 
     public function selectAndRenderAllUserItems()
