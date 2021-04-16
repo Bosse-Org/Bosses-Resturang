@@ -70,7 +70,7 @@ class CBooking
 
             <div id="amountpeoplediv">
 	    	<label for="text">Antal Personer:</label><br/>
-		    <input type="number" name="amountpeople" id="amountpeople"/><br/>
+		    <input type="number" name="amountpeople" id="amountpeople" min="1" max="8"/><br/>
             </div>
 
             <div id="datediv">
