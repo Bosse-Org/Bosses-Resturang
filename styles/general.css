@@ -69,6 +69,7 @@ a:hover {
     margin: auto;
     padding-left: 10px;
     margin-top: 50px;
+    font-family: 'Antonio';
 }
 input {
     width: 200px;
@@ -130,6 +131,7 @@ label {
 input[type=submit] {
     height: 50px;
     font-size: 20px;
+    font-family: 'Antonio';
 }
 #footer{
     display: flex;
