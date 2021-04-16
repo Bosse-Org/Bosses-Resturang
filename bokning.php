@@ -1,6 +1,6 @@
 <?php
 require("include/CApp.php");
-$app->renderHeader("Booking");
+$app->renderHeader("Bokning");
 
 class CBooking
 {

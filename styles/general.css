@@ -4,14 +4,17 @@ body {
 }
 
 a {
-    display: inline;
     margin: auto;
     list-style: none;
     padding: auto;
     text-align: center;
+    align-items: center;
+    display: block;
     width: 20%;
+    height: 100%;
     border: none;
     text-decoration: none;
+    font-size: 18px;
 }
 a:hover {
     background-color:rgba(0, 0, 0, 0.2);
@@ -46,7 +49,7 @@ a:hover {
     top: 0;
     position: -webkit-sticky;
     position: sticky;
-    background-color: rgba(218, 181, 61, 0.459);
+    background-color: rgba(192, 170, 98, 0.459);
     display: flex;
     height: 50px;
 }
@@ -55,10 +58,10 @@ a:hover {
     align-self: center;
     align-items: center;
     height: 120vh;
-    background-color: rgba(170, 134, 34, 0.692);
     margin-top: auto;
     font-family: 'Lobster';
     display: flex;  
+    background-image: url("images/svartbord.jpg");
 }
 #formdiv {
     height: 500px;
