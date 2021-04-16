@@ -25,7 +25,7 @@ class CBooking
 		}
 		while($row = $timesTable->fetch_assoc())
 		{
-			if (!strpos($row["time"], $usersTableString) == true)
+			if (strpos($row["time"], $usersTimeString) == false)
 				echo('<option value="'. $row["time"] .'" label="'. $row["time"] .'">'. $row["time"] .'</option>');
 		}
 	}
