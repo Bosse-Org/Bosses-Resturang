@@ -1,6 +1,6 @@
 <?php
 require_once("include/CApp.php");
-$app->renderHeader("Home");
+$app->renderHeader("Bosses Restaurang");
 ?>
 
 <?php
