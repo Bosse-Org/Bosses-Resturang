@@ -47,7 +47,7 @@ class CApp
                 <a href="bokning.php">Bokning</a>
                 <a>Om Oss</a>
                 <a>pog</a>
-                <a>pog</a>
+                <a href="text.php">InfoBattles.org (Join us)</a>
             </div>
             <div id="header">
                 <h1 class="title"><?php echo($title)?></h1>
