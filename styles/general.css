@@ -49,19 +49,19 @@ a:hover {
     top: 0;
     position: -webkit-sticky;
     position: sticky;
-    background-color: rgba(192, 170, 98, 0.459);
+    background-color: rgb(160, 148, 115);
     display: flex;
-    height: 50px;
+    height: 30px;
 }
 
 #main { 
+    background-image: url("../images/svartbord.jpg");
     align-self: center;
     align-items: center;
     height: 120vh;
     margin-top: auto;
     font-family: 'Lobster';
     display: flex;  
-    background-image: url("images/svartbord.jpg");
 }
 #formdiv {
     height: 500px;
@@ -73,8 +73,12 @@ input {
     width: 130px;
     height: 18px;
 }
+label {
+    color: wheat;
+}
 .booking-title {
     align-self: center;
+    color: wheat;
 }
 #bookingForm {
     align-self: center;
