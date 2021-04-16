@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
 }
 
 a {
@@ -12,17 +12,6 @@ a {
     width: 20%;
     border: none;
     text-decoration: none;
-}
-input {
-    width: 200px;
-}
-input#Boka {
-    width: 165px;
-    height: 50px;   
-    margin-top: 18px;
-    font-family: 'Lobster';
-    font-size: 2em;
-    border-radius: 3px;
 }
 a:hover {
     background-color:rgba(0, 0, 0, 0.2);
@@ -59,39 +48,67 @@ a:hover {
     position: sticky;
     background-color: rgba(218, 181, 61, 0.459);
     display: flex;
+    height: 50px;
 }
 
-#main {
+#main { 
+    align-self: center;
+    align-items: center;
     height: 120vh;
     background-color: rgba(170, 134, 34, 0.692);
     margin-top: auto;
     font-family: 'Lobster';
     display: flex;  
 }
-.form {
+#formdiv {
     height: 500px;
-    width: 1000px;
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: 100px 100px 100px 100px;
+    width: 300px;
     margin: auto;
+    padding-left: 10px;
 }
-.bookingForm {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1 span 1;
+input {
+    width: 130px;
+    height: 18px;
 }
-#firstname {
-    grid-column-start: 1;
-    grid-row-start: 2;
+.booking-title {
+    align-self: center;
 }
-#lastname {
-    grid-column-start: 2;
-    grid-row-start: 2;
+#bookingForm {
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    display: grid;
+    width: 400px;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 50px 50px 50px 50px 50px;
 }
-#phonenumber {
-    grid-column-start: 1;
-    grid-row-start: 3;
+#firstnamediv {
+    grid-column: 1;
+    grid-row: 1;
+}
+#lastnamediv {
+    grid-column: 2;
+    grid-row: 1;
+}
+#phonenumberdiv {
+    grid-column: 1;
+    grid-row: 2;
+}
+#amountpeoplediv {
+    grid-column: 2;
+    grid-row: 2;
+}
+#datediv {
+    grid-column: 1;
+    grid-row: 3;
+}
+#timediv {
+    grid-column: 2;
+    grid-row: 3;
+}
+#bokadiv {
+    grid-column: 1;
+    grid-row: 4;
 }
 #footer{
     display: flex;
