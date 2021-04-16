@@ -33,33 +33,48 @@ class CBooking
     public function renderBooking()
     {
         ?>
+        
+        <div id="formdiv">
             <h2 class="booking-title">Bokning</h2>
-        <div class="form">
             <form id="bookingForm" name="bookingForm" onsubmit="return validateForm(this);" method="post">
             
+            <div id="firstnamediv">
             <label for="text">Förnamn:</label><br/>
 	    	<input type="text" name="firstname" id="firstname"/><br/>
+            </div>
 
+            <div id="lastnamediv">
             <label for="text">Efternamn:</label><br/>
 	    	<input type="text" name="lastname" id="lastname"/><br/>
-	
+            </div>
+
+            <div id="phonenumberdiv">
 	    	<label for="text">Telefonnummer:</label><br/>
 	    	<input type="tel" name="phonenumber" id="phonenumber"/><br/>
-	
+            </div>
+
+            <div id="amountpeoplediv">
 	    	<label for="text">Antal Personer:</label><br/>
 		    <input type="number" name="amountpeople" id="amountpeople"/><br/>
-	
+            </div>
+
+            <div id="datediv">
     		<label for="text">Datum:</label><br/>
     		<input type="date" name="date" id="date"/><br/>
-	
+            </div>
+
+            <div id="timediv">
 	    	<label for="text">Tid:</label><br/>
 			<select type="time" name="time" id="time">
 			<?php
 				$this->renderAvailableTimes();
 			?>
             </select><br/>
-	
-		    <input type="submit" value="Boka" id="Boka" ><br>
+            </div>
+
+            <div id="bokadiv">      
+		    <input type="submit" value="Boka" id="boka" ><br>
+            </div>
             </form>
         </div>
         <?php
