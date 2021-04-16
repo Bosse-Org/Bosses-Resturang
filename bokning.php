@@ -18,15 +18,30 @@ class CBooking
 	{
 		$usersTable = $this->m_app->db()->query("SELECT time FROM users");
 		$timesTable = $this->m_app->db()->query("SELECT time FROM available_times");
-		$usersTimeString;
+		$x = 0;
+		$value = false;
+		$userTimeTable = [];
 		while($usersRow = $usersTable->fetch_Assoc())
 		{
-			$usersTimeString .= $usersRow["time"];
+			$userTimeTable[$x] = $usersRow["time"];
+			$x++;
 		}
 		while($row = $timesTable->fetch_assoc())
 		{
-			if (strpos($row["time"], $usersTimeString) == false)
+			for ($i = 0; $i < $x; $i++)
+			{
+				if ($row["time"] == $userTimeTable[$i])
+				{
+					$value = true;
+					break;
+				}
+				else 
+					$value = false;
+			}
+			if ($value == false)
+			{
 				echo('<option value="'. $row["time"] .'" label="'. $row["time"] .'">'. $row["time"] .'</option>');
+			}
 		}
 	}
 
