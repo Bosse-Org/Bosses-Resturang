@@ -17,7 +17,7 @@ class CBooking
 	{
 		$usersTable = $this->m_app->db()->query("SELECT time FROM users");
 		$timesTable = $this->m_app->db()->query("SELECT time FROM available_times");
-		$userTimeTable;
+		$userTimeTable = " ";
 		while($usersRow = $usersTable->fetch_Assoc())
 		{
 			$userTimeTable .= $usersRow["time"];
