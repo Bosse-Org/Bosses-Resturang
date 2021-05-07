@@ -28,11 +28,12 @@ a:hover {
 }
 #header {
     display: flex;
-    height: 50vh;
+    height: 80vh;
     top: 0;
     background-color: white;
     margin: auto;
     background-image: url(https://wallpaperaccess.com/full/3014609.jpg);
+    background-image: url("../images/sushiplaceholder.jpg");
     background-position: center;
     background-size: 100%;
 }
