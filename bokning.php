@@ -187,10 +187,10 @@ class CBooking
 				$this->renderUserItem($row);
 			}
 		}
-		else
+		/*else
 		{
 			echo("Det finns inga användare");
-		}
+		}*/
 	}
     //--->Member Variables<---//
     private $m_validationErrors = []; 
