@@ -21,9 +21,8 @@ a:hover {
 .title {
     font-size: 100px;
     margin: auto;
-    text-align: center;
     font-family: 'Lobster';
-    color: rgb(168, 35, 97);
+    color: rgb(224, 184, 184);
     text-shadow: black 0px 0px 10px;
 }
 #header {
@@ -63,8 +62,10 @@ a:hover {
     font-family: 'Lobster';
     display: flex;  
 }
-#sushi {
-    padding-left: 650px;
+
+#oxfile {
+    margin-top: 200px;
+    padding-left: 30px;
 }
 
 #formdiv {
