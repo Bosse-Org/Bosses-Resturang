@@ -132,6 +132,8 @@ class CBooking
 			return false;
 		}
 		$this->m_validationErrors = [];
+		header("Location: http://localhost/Bosses-Resturang/bookingDone.php");
+		exit();
 		return true;
 	}
 
