@@ -48,6 +48,7 @@ class CBooking
         <div class="menu">
                 <a href="index.php">Hem</a> 
                 <a href="bokning.php">Bokning</a>
+				<a href="bookingDone.php">Din bokning</a>
                 <a>Om Oss</a>
             </div>
             
