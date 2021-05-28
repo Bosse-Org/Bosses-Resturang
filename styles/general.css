@@ -143,7 +143,7 @@ input[type=submit] {
     display: flex;
     flex-direction:row;
     height: 20vh;
-    background-color: rgb(230, 15, 15);
+    background-color: rgb(153, 143, 143);
     border-top: 1px solid black;
 }
 #leftFooter{
