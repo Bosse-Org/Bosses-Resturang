@@ -37,6 +37,8 @@ a:hover {
     background-size: 100%;
 }
 
+
+
 #header::after {
     background: rgba(0, 0, 0, 0.1);
 }
@@ -64,6 +66,9 @@ a:hover {
 #oxfile {
     margin-top: 200px;
     padding-left: 30px;
+    background-image: url("../images/oxfileplaceholder.png");
+    width: 800px;
+    height: 550px;
 }
 
 #formdiv {
@@ -152,6 +157,87 @@ input[type=submit] {
 }
 #rightFooter{
     width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 40px;
+        margin-left: 12px;
+    }
+    #header {
+        background-size: 220%;
+        
+    }
+    .menu {
+        height: 32px;
+    }
+    #main {
+        height: 140vh;
+    }
+    #oxfile {
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+    #formdiv {
+        height: 500px;
+        width: 600px;
+        margin: auto;
+        padding-left: 10px;
+        margin-top: 50px;
+        font-family: 'Antonio';
+    }
+    .booking-title {
+        align-self: center;
+        color: wheat;
+        font-size: 50px;
+        margin-left: 100px;
+    }
+    #bookingForm {
+        align-self: center;
+        align-items: center;
+        align-content: center;
+        display: grid;
+        width: 300px;
+        grid-template-columns: 300x;
+        grid-template-rows: repeat(7, 80px);
+        padding-left: 60px;
+    }
+    #firstnamediv {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #lastnamediv {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #phonenumberdiv {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #amountpeoplediv {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #datediv {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    #time {
+        height: 24px;
+    }
+    #timediv {
+        grid-column: 1;
+        grid-row: 6;
+        padding-left: 60px;
+    }
+    #bokadiv {
+        grid-column: 1;
+        grid-row: 7;
+        margin-left: 5px;
+        margin-top: 50px;
+        width: 200px;
+        height: 50px;
+    }
 }
 
 .clearfix {
